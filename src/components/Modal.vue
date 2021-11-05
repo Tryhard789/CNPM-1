@@ -12,7 +12,9 @@
 			</b-row>
 			<b-row>
 				<b-col cols="4">
-					<img :src="food.src" :alt="food.name">
+					<!-- <img src="" alt=""> -->
+					<img :src="food.img" :alt="food.name" style="width: 100%; height: auto">
+					<!-- <img :src="food.src" :alt="food.name"> -->
 				</b-col>
 				<b-col>
 					<b-container>
@@ -26,8 +28,8 @@
 								</span>
 								</b-col>
 						</b-row>
-						<b-row class="mt-4">
-							<b-col>
+						<b-row class="mt-4" style="margin-top: 0px;">
+							<b-col style="margin-top: 0px;">
 							<h3>Quantity:</h3>
 							</b-col>
 							<b-col class="h3">
@@ -42,7 +44,7 @@
 							</span>
 							</b-col>
 						</b-row>
-						<b-row class="mt-4 ">
+						<b-row class="mt-4" style="margin-top: 0px;">
 							<b-col>
 							<h3> Select sidedish &nbsp;</h3>
 							<span v-for="name in Object.keys(this.food.side)" :key="`${name}`" class="mt-2">
@@ -60,7 +62,7 @@
 									<b-icon icon="cart-check-fill"></b-icon>
 								</b-button>
 								<b-button @click="removeFood" class="float-left mx-2">
-									<b-icon icon="cart-x-fill"></b-icon>
+									<b-icon icon="arrow-counterclockwise"></b-icon>
 								</b-button>
 							</b-card-footer>
 							</b-col>
@@ -88,7 +90,7 @@ export default {
 		OrderFood(){
 			this.selected.forEach((id)=>this.food.side[id]=true)
 			this.$emit('order-up',this.food)
-			alert('added')
+			alert('Added')
 		},
 		add(){
 			if(this.food.qtity<100)this.food.qtity++
@@ -98,7 +100,10 @@ export default {
 		},
 		removeFood(){
 			this.food.qtity=0;
-			this.OrderFood()
+			// this.OrderFood() old
+			this.selected.forEach((id)=>this.food.side[id]=true)
+			this.$emit('order-up',this.food)
+			alert('Reseted')			
 		}
 	},
 	emits:['order-up','close']
