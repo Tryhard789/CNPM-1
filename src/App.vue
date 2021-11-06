@@ -1,5 +1,9 @@
 <template>
+
 <div>
+
+  <div>
+
     <b-container fluid>
     <b-row>
     <b-col sm="8" cols="12">
@@ -15,7 +19,11 @@
     </b-row>
     </b-container>
     <ModalFood :food="food" @close="closeModal" v-show="this.openModal" @order-up="addFood" />
+
 </div>
+
+  </div>
+
 </template>
 
 <script>
@@ -47,15 +55,15 @@ export default {
       {id:5,name:'Soft drink',src:'sdf'},
     ]
     this.List=[
-      {id:1,name:'coca',type:5,price:50, qtity:0,img:'https://picsum.photos/600/300/?image=25',
+      {id:1,name:'Coca',type:5,price:50, qtity:0,img:'https://lh3.googleusercontent.com/pw/AM-JKLWW2wgYdcV2RpAZOV8rByBDqg2UlRHETQoVwYRJG-qTbgkGL6yfnoqQ3pOrVEYHEKNN1oJtMcgm8K1fGZSoSI-SeY6pqjBsI7WdgkzKXPgy-V-ZsWcx5e7YT_SxDtTDmw93E33wTGs05hv93meZ48GG1A=w820-h512-no?authuser=1',
         side:{'fried':false,'salad':false,'pop':false}},
-      {id:2,name:'Apple juic',type:4,price:80, qtity:0,img:'asdfa',
+      {id:2,name:'Apple juice',type:4,price:80, qtity:0,img:'https://lh3.googleusercontent.com/pw/AM-JKLXmzWP3nJwfmCOOEsoPyj02kdkzd_TSrZZReTh1s3Qi_1IsbMHSnWti6cpfD-BzhW43R-pPWx3_pcdw3htyeahRsMJtH67MOZtLsXEBLjpq5Dqj7vJqtkQlF42AzPOwQ5bxtPoNksStIud5oPQdnriBkA=w480-h538-no?authuser=1',
         side:{'fried':false,'salad':false,'pop':false}},
-      {id:3,name:'Cup cake',type:3,price:60, qtity:0,img:'asdfa',
+      {id:3,name:'Cup cake',type:3,price:60, qtity:0,img:'https://lh3.googleusercontent.com/pw/AM-JKLUrXXhDhsYkm778c36IZ04qkN4zOJV3VwwgJHsnwOdv6O2tntrqNONuyEk6kDnEcRezVsNtF7BwWpiHWMmu8TRlKZ8wki2WEfSZrJaCMUEU-HX3CaUB9UOlJy6PKIJOCVUggovr-O8Hn09tY1VVpjcgMg=w840-h726-no?authuser=1',
         side:{'fried':false,'salad':false,'pop':false}},
-      {id:4,name:'Fish',type:2,price:100, qtity:0,img:'asdfa',
+      {id:4,name:'Fish',type:2,price:100, qtity:0,img:'https://lh3.googleusercontent.com/pw/AM-JKLXinyrXF2AHnKoyLHiqacNgZJclVvH5NxHTJiJfJ0fkgxt-t8hwmcgEAQsX7jAd_rhVQjJ5NJqrJgVzfj0ZeH8_h5dhmBxTj0m62QBBh3ZMHGA6cAS-k23etGZvc1fUTxOtP8uc7JAe8hubMa4rhRLm7w=w920-h612-no?authuser=1',
         side:{'fried':false,'salad':false,'pop':false}},
-      {id:5,name:'Steake',type:6,price:90, qtity:0,img:'asdfa',
+      {id:5,name:'Steake',type:6,price:90, qtity:0,img:'https://lh3.googleusercontent.com/pw/AM-JKLUa2ELcP3RyqxgmFzsd0cRsYMTHUC8GvTJvhOUoTXjJyLwijEiOpOypOxuQuLfzZgHynPBnby07GQ6Jxu_uuTlE2TBcQhC9doNr7dzhss0FNqIJOU-Pl08A8WoAlkL_6lmvEZCdyqSWq01zyJfpLgi_Bw=w900-h619-no?authuser=1',
         side:{'fried':false,'salad':false,'pop':false}},
     ]
     this.Cart=[]
