@@ -100,15 +100,14 @@ export default {
 		},
 		removeFood(){
 			this.food.qtity=0;
-<<<<<<< HEAD
 
 			this.OrderFood()
-=======
+
 			// this.OrderFood() old
 			this.selected.forEach((id)=>this.food.side[id]=true)
 			this.$emit('order-up',this.food)
 			alert('Reseted')			
->>>>>>> 6c081c12147c4d0f6567dae529323c36a8c4ecb6
+
 		}
 	},
 	emits:['order-up','close']
