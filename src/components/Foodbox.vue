@@ -2,23 +2,27 @@
 	<div class="container my-5">
 		<b-card :img-src="food.img" :img-alt="food.name" img-top>
 			<b-card-text>
-				Price: ${{food.price}}
-				<button class="float-right btn btn-danger" 
+					<button class="float-right btn btn-danger" 
 						@click="OpenModal"
 					> 
 					<span >
 						<b-icon icon="cart"></b-icon>
-				</span>
+					</span>
 					Buy
-				</button>
+					</button>
+				
+				<div>	{{food.name}}
+				</div>
+				Price: ${{food.price}}
+				<!-- <div>Price: ${{food.price}}</div> -->
+				
 			</b-card-text>
 		</b-card>
 		
 	</div>
 </template>
+
 <script>
-
-
 export default {
 	name:'FoodBox',
 	props:{
