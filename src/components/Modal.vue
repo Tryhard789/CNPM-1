@@ -86,7 +86,7 @@ export default {
 	},
 	methods:{
 		OrderFood(){
-			this.selected.forEach((id)=>this.food.side[id]=true)
+			//this.selected.forEach((id)=>this.food.side[id]=true)
 			this.$emit('order-up',this.food)
 			alert('added')
 		},
@@ -98,6 +98,7 @@ export default {
 		},
 		removeFood(){
 			this.food.qtity=0;
+
 			this.OrderFood()
 		}
 	},
@@ -129,7 +130,7 @@ export default {
     flex-direction: column;
 	width: 50rem;
 	z-index: 100rem;
-	border-radius:1rem ;
+	border-radius: 2rem ;
   }
 	
   

@@ -1,20 +1,20 @@
 <template>
 <div>
-  <b-container fluid>
-  <b-row>
-  <b-col sm="8" cols="12">
-  <Menu :Filt="filter" :FoodList="List" :Types="Types" 
-    @change-filter="changeFilter"
-    @openmodal="getModal"
-  />
-  </b-col>
-  <b-col sm="4" cols="12">  
-    <div v-for="food in Cart" :key="food.id"><h1 v-if="food.qtity>0">{{food.name}} {{food.price}}</h1></div>
-    <div>total: {{total}}</div>
-  </b-col>
-  </b-row>
-  </b-container>
-  <ModalFood :food="food" @close="closeModal" v-show="this.openModal" @order-up="addFood" />
+    <b-container fluid>
+    <b-row>
+    <b-col sm="8" cols="12">
+    <Menu :Filt="filter" :FoodList="List" :Types="Types" 
+      @change-filter="changeFilter"
+      @openmodal="getModal"
+    />
+    </b-col>
+    <b-col sm="4" cols="12">  
+      <div v-for="food in Cart" :key="food.id"><h1 v-if="food.qtity>0">{{food.name}} {{food.price}}</h1></div>
+      <div>total: {{total}}</div>
+    </b-col>
+    </b-row>
+    </b-container>
+    <ModalFood :food="food" @close="closeModal" v-show="this.openModal" @order-up="addFood" />
 </div>
 </template>
 
@@ -40,7 +40,7 @@ export default {
   },
   created(){
     this.Types=[
-      {id:1,name:'all',src:'sdfs'},
+      {id:1,name:'all',src:'https://picsum.photos/600/300/?image=25'},
       {id:2,name:'Sea food',src:'sdfsf'},
       {id:3,name:'Desert',src:'sdfs'},
       {id:4,name:'Juice',src:'sdfs'},

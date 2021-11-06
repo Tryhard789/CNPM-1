@@ -1,6 +1,6 @@
 <template>
 	<b-card @click="$emit('change-filter',type.id)" :img-src="type.src" :img-alt="type.name" img-top 
-		class=" center border-0 " >
+		class=" center border-2" >
 		<b-card-text class="text-align-center">
 			{{type.name}}
 		</b-card-text>
@@ -15,3 +15,11 @@ export default {
 	emits:['change-filter'],
 }
 </script>
+<style  scoped>
+	b-card{
+		max-width: 5rem !important;
+		overflow: hidden !important;
+	}
+
+</style>
+
