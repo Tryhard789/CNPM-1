@@ -4,7 +4,7 @@
 		<b-container class="mt-3 mb-3">
 			<b-row>
 				<b-col>
-				<p class="float-left mx-2"> Add to Cart</p>
+				<p class="float-left mx-2"> Add to to Cart</p>
 				<b-button @click="$emit('close')" class="float-right mx-2">
 					<b-icon icon="cart-x-fill" ></b-icon>
 				</b-button>
@@ -24,7 +24,7 @@
 								</b-col>
 								<b-col>
 								<span class="float-right mx-2 mt-0">
-									<span class="h2"> Price: {{food.price}}</span>
+									<span class="h2"> Pricccccccccccccccccccccccccccccccccccce: {{food.price}}</span>
 								</span>
 								</b-col>
 						</b-row>

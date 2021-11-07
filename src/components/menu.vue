@@ -1,5 +1,5 @@
 <template>
-	<div class="border-2">
+	<div>
 	<NavBar :Types="Types" @change-filter="PushChange"/>
 	
 	<Store :Filter="Filt" :List="FoodList" 

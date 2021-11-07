@@ -1,50 +1,66 @@
 <template>
-
-
-<div>
-
-  <div>
-
+  <!-- <div>
     <b-container fluid>
-
-<div>
-  <b-container fluid>
-
     <b-row>
-      <b-col sm="8" cols="12" class="menu">
-        <Menu :Filt="filter" :FoodList="List" :Types="Types"
-          @change-filter="changeFilter"
-          @openmodal="getModal"
-        />
-      </b-col>
-      <b-col sm="4" cols="12" class="cart">
-        <div v-for="food in Cart" :key="food.id"><h1 v-if="food.qtity>0">{{food.name}} {{food.price}}</h1></div>
-        <div>total: {{total}}</div>
-      </b-col>
+    <b-col sm="8" cols="12">
+    <Menu :Filt="filter" :FoodList="List" :Types="Types" 
+      @change-filter="changeFilter"
+      @openmodal="getModal"
+    />
+    </b-col>
+    <b-col sm="4" cols="12">  
+      <div v-for="food in Cart" :key="food.id"><h1 v-if="food.qtity>0">{{food.name}} {{food.price}}</h1></div>
+      <div>total: {{total}}</div>
+    </b-col>
     </b-row>
-
     </b-container>
     <ModalFood :food="food" @close="closeModal" v-show="this.openModal" @order-up="addFood" />
-
-</div>
-
- 
+  </div> -->
 
 
-  </b-container>
-  <ModalFood :food="food" @close="closeModal" v-show="this.openModal" @order-up="addFood" />
-</div>
- </div>
+<!--<template>-->
+  <div>
+    <b-container fluid>
+    <b-row>
+    <b-col sm="8" cols="12">
+    <Menu :Filt="filter" :FoodList="List" :Types="Types" 
+      @change-filter="changeFilter"
+      @openmodal="getModal"
+    />
+    </b-col>
+    <b-col sm="4" cols="12">
+      <h1 style="font-size:55px; font-weight: lighter; border-bottom: solid 2px lightgrey">Your Cart</h1> 
+      <div class="header" style="display:flex; justify-content:space-between;background-color:#E8E8E8;border:solid 1px lightgray; padding-top: 10px">
+        <p style="margin-left: 10px">Item</p>
+        <p style="margin-right: 10px">Price</p>
+      </div>
+      <div v-for="food in Cart" :key="food.id" style="display: flex; justify-content: space-between; background-color:#E8E8E8;border-radius: 10px; margin: 20px auto"><h1 v-if="food.qtity>0" style="font-weight: lighter; font-size:40px; margin-left:10px">{{food.qtity}} x {{food.name}}: </h1><h1 v-if="food.qtity>0" style="text-align:right;margin-right:10px;color:#FA5401">${{food.price}}</h1></div>
+      <div style="text-align: right; font-size: 40px; border-top: double 2px lightgrey">Total: ${{total}}</div>
+      
+      <div class="buttonclass"><GooglePay /></div>
+
+      
+    </b-col>
+    </b-row>
+    </b-container>
+    <ModalFood :food="food" @close="closeModal" v-show="this.openModal" @order-up="addFood" />
+  </div>
 </template>
 
 <script>
 import Menu  from './components/menu.vue'
 import ModalFood from './components/Modal.vue'
 
+// import HelloWorld from "./components/HelloWorld";
+import GooglePay from "./components/GooglePay";
+
+
 export default {
   name: 'App',
   components: {
-    Menu,ModalFood
+    Menu,ModalFood,
+    // HelloWorld,
+    GooglePay,
   },
   data(){
     return{
@@ -59,7 +75,7 @@ export default {
   },
   created(){
     this.Types=[
-      {id:1,name:'all',src:'https://picsum.photos/600/300/?image=25'},
+      {id:1,name:'all',src:'sdfs'},
       {id:2,name:'Sea food',src:'sdfsf'},
       {id:3,name:'Desert',src:'sdfs'},
       {id:4,name:'Juice',src:'sdfs'},
@@ -68,7 +84,7 @@ export default {
     this.List=[
       {id:1,name:'Coca',type:5,price:50, qtity:0,img:'https://lh3.googleusercontent.com/pw/AM-JKLWW2wgYdcV2RpAZOV8rByBDqg2UlRHETQoVwYRJG-qTbgkGL6yfnoqQ3pOrVEYHEKNN1oJtMcgm8K1fGZSoSI-SeY6pqjBsI7WdgkzKXPgy-V-ZsWcx5e7YT_SxDtTDmw93E33wTGs05hv93meZ48GG1A=w820-h512-no?authuser=1',
         side:{'fried':false,'salad':false,'pop':false}},
-      {id:2,name:'Apple juice',type:4,price:80, qtity:0,img:'https://lh3.googleusercontent.com/pw/AM-JKLXmzWP3nJwfmCOOEsoPyj02kdkzd_TSrZZReTh1s3Qi_1IsbMHSnWti6cpfD-BzhW43R-pPWx3_pcdw3htyeahRsMJtH67MOZtLsXEBLjpq5Dqj7vJqtkQlF42AzPOwQ5bxtPoNksStIud5oPQdnriBkA=w480-h538-no?authuser=1',
+      {id:2,name:'Apple juice',type:4,price:80, qtity:0,img:'https://lh3.googleusercontent.com/pw/AM-JKLXmzWP3nJwfmCOOEsoPyj02kdkzd_TSrZZReTh1s3Qi_1IsbMHSnWti6cpfD-BzhW43R-pPWx3_pcdw3htyeahRsMJtH67MOZtLsXEBLjpq5Dqj7vJqtkQlF42AzPOwQ5bxtPoNksStIud5oPQdnriBkA=w480-h538-no?authuser=1', //538
         side:{'fried':false,'salad':false,'pop':false}},
       {id:3,name:'Cup cake',type:3,price:60, qtity:0,img:'https://lh3.googleusercontent.com/pw/AM-JKLUrXXhDhsYkm778c36IZ04qkN4zOJV3VwwgJHsnwOdv6O2tntrqNONuyEk6kDnEcRezVsNtF7BwWpiHWMmu8TRlKZ8wki2WEfSZrJaCMUEU-HX3CaUB9UOlJy6PKIJOCVUggovr-O8Hn09tY1VVpjcgMg=w840-h726-no?authuser=1',
         side:{'fried':false,'salad':false,'pop':false}},
@@ -125,4 +141,13 @@ export default {
 </script>
 
 <style>
+  .foodBox_class img {
+    /* float: left; */
+    /* width:  100px; */
+    height: 250px;
+    object-fit: cover;
+  }
+  .buttonclass {
+    text-align: center;
+  }
 </style>

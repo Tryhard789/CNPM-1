@@ -1,15 +1,15 @@
 <template>
-	<div class="container my-5">
+	<div class="foodBox_class container my-5">
 		<b-card :img-src="food.img" :img-alt="food.name" img-top>
 			<b-card-text>
-					<button class="float-right btn btn-danger" 
-						@click="OpenModal"
-					> 
+				<button class="float-right btn btn-danger" 
+					@click="OpenModal"
+				> 
 					<span >
 						<b-icon icon="cart"></b-icon>
 					</span>
 					Buy
-					</button>
+				</button>
 				
 				<div>	{{food.name}}
 				</div>
