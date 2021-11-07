@@ -1,21 +1,21 @@
 <template>
-  <div>
-    <b-container fluid>
+<div>
+  <b-container fluid>
     <b-row>
-    <b-col sm="8" cols="12">
-    <Menu :Filt="filter" :FoodList="List" :Types="Types" 
-      @change-filter="changeFilter"
-      @openmodal="getModal"
-    />
-    </b-col>
-    <b-col sm="4" cols="12">  
-      <div v-for="food in Cart" :key="food.id"><h1 v-if="food.qtity>0">{{food.name}} {{food.price}}</h1></div>
-      <div>total: {{total}}</div>
-    </b-col>
+      <b-col sm="8" cols="12" class="menu">
+        <Menu :Filt="filter" :FoodList="List" :Types="Types"
+          @change-filter="changeFilter"
+          @openmodal="getModal"
+        />
+      </b-col>
+      <b-col sm="4" cols="12" class="cart">
+        <div v-for="food in Cart" :key="food.id"><h1 v-if="food.qtity>0">{{food.name}} {{food.price}}</h1></div>
+        <div>total: {{total}}</div>
+      </b-col>
     </b-row>
-    </b-container>
-    <ModalFood :food="food" @close="closeModal" v-show="this.openModal" @order-up="addFood" />
-  </div>
+  </b-container>
+  <ModalFood :food="food" @close="closeModal" v-show="this.openModal" @order-up="addFood" />
+</div>
 </template>
 
 <script>
@@ -106,5 +106,4 @@ export default {
 </script>
 
 <style>
-
 </style>
