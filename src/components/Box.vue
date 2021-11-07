@@ -1,10 +1,9 @@
 <template>
-	<b-card @click="$emit('change-filter',type.id)" :img-src="type.src" :img-alt="type.name" img-top 
-		class=" center border-0 " >
-		<b-card-text class="text-align-center">
+	<div @click="$emit('change-filter',type.id)">
+		<div>
 			{{type.name}}
-		</b-card-text>
-	</b-card>
+		</div>
+	</div>
 </template>
 <script>
 export default {
