@@ -7,6 +7,7 @@
 		</b-row>
 	</b-container>
 </template>
+
 <script>
 import FoodBox from './Foodbox.vue'
 export default {
