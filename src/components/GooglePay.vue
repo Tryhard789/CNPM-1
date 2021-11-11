@@ -34,8 +34,8 @@ export default {
   name: "GooglePay",
   props: {},
   data: () => ({
-    // amount: "0.00",
-    amount: "app.{{total}}",
+    amount: "0.00",
+    //amount: "app.{{total}}",
 
     existingPaymentMethodRequired: true,
     buttonColor: "#dc3545",
@@ -100,4 +100,4 @@ export default {
     background-color: #dc3545;
   }
   /* #dc3545 */
-</style>
+</style>  
