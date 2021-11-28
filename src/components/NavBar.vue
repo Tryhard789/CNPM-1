@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<b-nav class="border justify-content-center">
+		<b-nav class="border justify-content-center" style="background-color:red;">
 			<b-nav-item>
 				<Carousel :Types="Types" @change-filter="emitCarousel"/>
 			</b-nav-item>
