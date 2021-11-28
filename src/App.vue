@@ -74,12 +74,12 @@ export default {
     }
   },
   created(){
-    this.Types=[
-      {id:1,name:'all',src:'sdfs'},
-      {id:2,name:'Sea food',src:'sdfsf'},
-      {id:3,name:'Desert',src:'sdfs'},
-      {id:4,name:'Juice',src:'sdfs'},
-      {id:5,name:'Soft drink',src:'sdf'},
+  this.Types=[
+      {id:1,name:'All',src:'https://lh3.googleusercontent.com/pw/AM-JKLVXUZeBZSaY-JY641YfyEdxvrjjuXRYpE7tHg5uIeGWqhnPn8FLTdUnZXH4SJri_HtcK3UgwVJpM7Z0fpEx4sCs3oT3SzKKOgp4GQLAXQwZcgZAdiXzZSdLUgs7rveW1hA5GhctqFhhhRvUXBHtFC4=w100-h52-no'},
+      {id:2,name:'Sea food',src:'https://lh3.googleusercontent.com/pw/AM-JKLV1OiHB-0GRry8XpIhyUGXyJhmaCgnoySigwowAhfilA7vDA3LjwjExjiIPkiXOpLsZQag7CoDC79fj6V61GnE3xCf3VB7F3y9YIb4OM9YfIidHqzFaAHNPm9MpMrY7k9zISppqLNefq41tbZZlyLE=w100-h52-no'},
+      {id:3,name:'Desert',src:'https://lh3.googleusercontent.com/pw/AM-JKLWgxGgsJfw1c7wBWwZ1Gxpyl7jG00oajklIelkxWLgiAvidF2cvaHlroo2ldU2B8feZZs29qU0axXUZmtjY7h-J-WIXwnzFlwUFg0nKcLGsf4JRvJ9KKXYDC23oSwRWna-9YMIAQPprfWrt_7XCFY4=w100-h52-no'},
+      {id:4,name:'Juice',src:'https://lh3.googleusercontent.com/pw/AM-JKLUNwOylaO-CfbZOYcsSwMYQL9Wj9BnV3vfeyxXiDklGgfrfwbco7vgSQInnPsDX6ZSpg7iPxSqB7d-EhfzqMGV6nJPkr7Xmxj1_iIVLES55ift9SF4av8NrW0WFcn5J6ATHtIeAXQqCzsfeLQnd2WI=w100-h52-no'},
+      {id:5,name:'Soft drink',src:'https://lh3.googleusercontent.com/pw/AM-JKLVLxRQoghRvLvnHdEY9gzytVViz7PGSB5rJUCP8I4ferG1CwzMWbdT1Zm9ALxpCDYgM78f5Q4wX1q7uB9ajPGm-p8sgSsTbEMr3-D7SufIumZp7HevC-AfHQTFYELrS8ULQn7ZrNGzN6LCmuD-fkXk=w100-h52-no'},
     ]
     this.List=[
       {id:1,name:'Coca',type:5,price:50, qtity:0,img:'https://lh3.googleusercontent.com/pw/AM-JKLWW2wgYdcV2RpAZOV8rByBDqg2UlRHETQoVwYRJG-qTbgkGL6yfnoqQ3pOrVEYHEKNN1oJtMcgm8K1fGZSoSI-SeY6pqjBsI7WdgkzKXPgy-V-ZsWcx5e7YT_SxDtTDmw93E33wTGs05hv93meZ48GG1A=w820-h512-no?authuser=1',
